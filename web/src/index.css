@@ -1,0 +1,133 @@
+* {
+  margin:0;
+  padding:0;
+  color:#d06626;
+  font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif; 
+}
+body,html,#root {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color:black;
+  background-image:none;
+  background-color:#212429;
+  background-repeat:no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+
+meta{
+  content:"width:device-width, user-scalable:no";
+}
+#root{
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  display:flex;
+  width:100vw;
+  height:100vh;
+  max-width:100vw;
+  max-height:100vh;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.flex {
+  display: flex;
+  flex: 1;
+}
+
+input {
+  color:white;
+}
+
+.battery-outer .battery-charging-indicator {
+  position: absolute;
+  top: 40%;
+  left: 49.2%;
+  color: #cbd71d !important;
+  font-size: 40px;
+  display: none;
+}
+.battery-charging  .battery-charging-indicator {
+  display: block;
+  animation: fadeIn 0.8s infinite alternate;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.element:nth-child(1)
+{
+    flex: 4;
+}
+
+@media screen and (max-width: 768px) {
+  body, html {
+    font-size: 14px; /* Ajuster la taille de police pour les écrans plus petits */
+  }
+
+  /* Ajustements pour les éléments de la mise en page */
+  #root {
+    flex-direction: column; /* Afficher les éléments en colonne */
+  }
+
+  .element:nth-child(1) {
+    flex: 1; /* Ajuster la largeur du premier élément */
+  }
+}
+
+/* Styles for screens less than or equal to 320px (Mobile devices) */
+@media screen and (max-width: 320px) {
+  .container {
+    width: 200px; /* Ajustement pour les écrans plus petits */
+    padding: 5px;
+  }
+}
+
+/* Styles for screens between 321px and 480px (Mobile devices) */
+@media screen and (min-width: 321px) and (max-width: 480px) {
+  .container {
+    width: calc(100% - 15px); /* Ajustement pour les écrans plus petits */
+    padding: 5px;
+  }
+}
+
+/* Styles for screens between 481px and 768px (iPads, Tablets) */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .container {
+    width: calc(100% - 15px);
+    padding: 25px;
+  }
+}
+/* Styles for screens between 769px and 1024px (Small screens, laptops) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    width: 200px; /* Ajustement pour les écrans plus petits */
+    padding: 25px;
+  }
+}
+
+/* Styles for screens between 1025px and 1200px (Desktops, large screens) */
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+  .container {
+    width: calc(100% - 15px); /* Ajustement pour les écrans plus petits */
+    padding: 25px;
+  }
+}
+
+/* Styles for screens larger than 1200px (Extra large screens, TV) */
+@media screen and (min-width: 1201px) {
+  .container {
+    width: calc(100% - 15px); /* Ajustement pour les écrans plus petits */
+    padding: 25px;
+  }
+}

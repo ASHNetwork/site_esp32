@@ -1,0 +1,45 @@
+{ 
+	"settings": {
+		"react": {
+			"version": "detect"
+		}
+	},
+	"env": {
+		"browser": true,
+		"es2021": true
+	},
+	"extends": [
+		"eslint:recommended",
+		"plugin:react/recommended",
+		"plugin:@typescript-eslint/recommended",
+		"plugin:prettier/recommended",
+		"prettier",
+		"plugin:import/recommended",
+		"plugin:import/typescript"
+	],
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		"ecmaFeatures": {
+			"jsx": true
+		},
+		"ecmaVersion": 12,
+		"sourceType": "module"
+	},
+	"plugins": [
+		"react",
+		"@typescript-eslint",
+		"prettier",
+		"react-hooks"
+	],
+	"rules": {
+		"react-hooks/rules-of-hooks": "error",
+		"import/prefer-default-export": "off",
+		"@typescript-eslint/no-unused-vars":["error",{ "vars": "all", "args": "after-used", "ignoreRestSiblings": true }],
+		"import/no-default-export":"error","prettier/prettier": [
+			"error",
+			{
+			  "endOfLine": "auto"
+			}
+		  ]
+	}
+}
